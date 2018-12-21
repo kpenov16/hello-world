@@ -6,3 +6,6 @@
 
 ;; givenSingleStringDigit_returnDigitAsANumber
 (expect 3 (sum-the-string "3") )
+
+;; givenTwoNumbersSeparatedByComma_returnNumbersSum
+(expect 5 (sum-the-string "3,2") )
