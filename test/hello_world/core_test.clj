@@ -10,3 +10,5 @@
 ;; givenTwoNumbersSeparatedByComma_returnNumbersSum
 (expect 5 (sum-the-string "3,2") )
 
+;; givenAnyAmountOfNumbersSeparatedByComma_returnNumbersSum
+(expect 9 (sum-the-string "3,2,3,1") )
