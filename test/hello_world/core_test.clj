@@ -12,3 +12,6 @@
 
 ;; givenAnyAmountOfNumbersSeparatedByComma_returnNumbersSum
 (expect 9 (sum-the-string "3,2,3,1") )
+
+;; givenAnyAmountOfNumbersSeparatedByCommaOrNewLineChar_returnNumbersSum
+(expect 15 (sum-the-string "3\n2,3\n1,2\n3\n1") )
