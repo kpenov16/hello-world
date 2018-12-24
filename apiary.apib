@@ -1,0 +1,57 @@
+FORMAT: 1A
+HOST: http://api.spiderlog.mysmap.dk
+
+# Spider log api
+Provides servises for recording spiders seen on the road.
+
+# Group Spiders
+Access to sprider resources 
+
+## My Spiders [/spiders{?page,size}]
+### Get all spiders [GET]
++ Request
+
+    + Parameters
+        + page (required, number, `1` )... page number
+        + size (required, number, `10` )... page size
+
+    + Header
+        
+            Authorization: Basic dXNlcjpwYXNzd29yZA==
+            x-api-version: 1.0
++ Response 200 (application/json)
+
+    + Header
+    
+            ETag: "euyfewuyfvew76f7"
+            cache-control: max-age=600
+    
+    + Body
+    
+            {
+                "page" : 
+                {
+                    "number" : 1,
+                    "size" : 10,
+                    "totalPages" : 20
+                },
+                "spiders" : 
+                [   
+                    {
+                        "seenAt" : "2018-12-24T10:10",
+                        "imageUrl" : "uid-19247681/201408/14562881209_046a7f4d3d_z.jpg",
+                        "description" : "Spider I did't see on the train",
+                        "tags" : [
+                                    "big"
+                                ]
+                    },
+                                {
+                        "seenAt" : "2018-12-24T10:11",
+                        "imageUrl" : "uid-19247681/201408/14562881209_046a7f4d3d_z.jpg",
+                        "description" : "Spider I did't see again on the train",
+                        "tags" : [
+                                    "small"
+                                ]
+                    }
+                ]
+            }
